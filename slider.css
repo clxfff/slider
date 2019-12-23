@@ -1,0 +1,79 @@
+/* 整个界面div */
+.slide {
+    position: relative;
+    margin: auto;
+    width: 1024px;
+    height: 540px;
+    text-align: center;
+    color: #FFF;
+    overflow: hidden;
+}
+
+/* 轮播控件 */
+.slide ul {
+    margin: 10px 0;
+    padding: 0;
+    width: 9999px;
+    transition: all 0.5s;
+    animation: marginLeft 15s ease-in-out infinite;
+}
+
+/* 透明边框 */
+.slide li {
+    float: left;
+    width: 1024px;
+    height: 540px;
+    list-style: none;
+    line-height: 50px;
+    font-size: 24px;
+}
+
+/* 对于每一张图的文字布局 */
+li>div{
+    position: absolute;
+    top:500px;
+    width: 1024px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    color: black;
+}
+
+/* 鼠标放置在图片上时轮播暂停 */
+.slide:hover ul {
+    animation-play-state: paused;
+}
+
+
+@keyframes marginLeft {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    33.3% {
+        margin-left: -1024px;
+    }
+
+    53.3% {
+        margin-left: -1024px;
+    }
+
+    66.7% {
+        margin-left: -2048px;
+    }
+
+    88.7% {
+        margin-left: -2048px;
+    }
+
+    99.99% {
+        margin-left: -3072px;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
